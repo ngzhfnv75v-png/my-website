@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brand Reach – AI-written outreach</title>
+<style>
+:root{--bg:#f6f5ff;--card:#fff;--tx:#17142b;--mut:#6a6785;--ac:#5b5bf0;--ac2:#ff6b57;--act:#fff;--bd:#e4e2f5;--h1:#1d1250;--h2:#5b5bf0;--h3:#ff6b57;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0c1d;--card:#191631;--tx:#f3f1ff;--mut:#a9a5c9;--ac:#8b8bff;--ac2:#ff8a78;--act:#0e0c1d;--bd:#2c2850;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0c1d;--card:#191631;--tx:#f3f1ff;--mut:#a9a5c9;--ac:#8b8bff;--ac2:#ff8a78;--act:#0e0c1d;--bd:#2c2850;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.top{max-width:900px;margin:0 auto;padding:16px 18px;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+main{max-width:900px;margin:0 auto;padding:0 18px 30px}
+#view.card{max-width:620px;margin:0 auto}
+.hero{position:relative;overflow:hidden;border-radius:26px;padding:42px 26px 30px;color:#fff;background:radial-gradient(circle at 85% 10%,var(--h3) 0,transparent 45%),linear-gradient(135deg,var(--h1),var(--h2) 80%)}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;font-size:.85rem;font-weight:600}
+.hero h2{font-size:clamp(2rem,7vw,3.3rem);line-height:1.05;letter-spacing:-.03em;margin:16px 0 12px;color:#fff}
+.hero h2 em{font-style:normal;background:linear-gradient(90deg,#ffd28a,#ff8a78);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.1rem;max-width:520px;color:rgba(255,255,255,.88)}
+.cta{font:inherit;font-weight:700;font-size:1.1rem;border:0;border-radius:14px;padding:15px 30px;cursor:pointer;color:#1d1250;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.6);animation:pulse 2.4s infinite}
+.ghost{font:inherit;background:none;border:0;color:#fff;text-decoration:underline;cursor:pointer;margin-left:14px}
+.mock{margin-top:28px;max-width:400px;background:var(--card);color:var(--tx);border-radius:16px;padding:16px 18px;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-2deg);animation:float 5s ease-in-out infinite;font-size:.92rem}
+.mock small{color:var(--mut)}
+.mock .tag{display:inline-block;margin-top:8px;background:var(--bg);border-radius:999px;padding:2px 10px;font-size:.78rem;color:var(--ac)}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@keyframes float{50%{transform:rotate(-2deg) translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.cta,.mock{animation:none}}
+.sec{margin-top:34px}
+.sec h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px}
+.step i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;font-style:normal;font-weight:800;color:var(--act);background:linear-gradient(135deg,var(--ac),var(--ac2));margin-bottom:10px}
+.step b{display:block;margin-bottom:4px}
+.step span{color:var(--mut);font-size:.93rem}
+.ideas{display:flex;flex-wrap:wrap;gap:10px}
+.ideas span{background:var(--card);border:1px solid var(--bd);border-radius:999px;padding:9px 16px}
+.callout{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--ac2);border-radius:14px;padding:14px 16px;margin-top:34px}
+.final{text-align:center;margin-top:34px}
+.final .cta{color:var(--act);background:linear-gradient(135deg,var(--ac),var(--ac2));animation:none}
+footer{max-width:900px;margin:0 auto;padding:6px 18px 30px;text-align:center;font-size:.8rem;color:var(--mut)}
+footer a{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;box-shadow:0 8px 28px rgba(60,40,160,.08)}
+.dots{display:flex;gap:6px;max-width:620px;margin:0 auto 14px}
+.dots i{flex:1;height:5px;border-radius:3px;background:var(--bd)}
+.dots i.on{background:linear-gradient(90deg,var(--ac),var(--ac2))}
+h2{font-size:1.2rem;margin:0 0 12px}
+label{display:block;font-weight:600;margin:14px 0 6px}
+input,textarea{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:11px 13px}
+input:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{cursor:pointer;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:999px;padding:6px 14px;font:inherit}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{cursor:pointer;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:16px;padding:18px;text-align:left;font:inherit}
+.opt b{display:block;font-size:1.3rem}
+.opt span{color:var(--mut);font-size:.9rem}
+.opt.sel{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac)}
+.row{display:flex;gap:10px;margin-top:20px;justify-content:space-between}
+button.p,button.s{font:inherit;border-radius:12px;padding:11px 20px;cursor:pointer;border:1px solid var(--ac)}
+button.p{background:linear-gradient(135deg,var(--ac),var(--ac2));border-color:transparent;color:var(--act);font-weight:700}
+button.s{background:transparent;color:var(--ac)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.note{color:var(--mut);font-size:.88rem;margin-top:12px}
+.sum{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd)}
+.tot{font-size:2.3rem;font-weight:800;margin:16px 0 4px}
+.tot s{color:var(--mut);font-size:1.3rem;font-weight:500}
+.err{color:#d6402c;margin-top:10px}
+.ok{color:#1d9a5b;margin-top:8px;font-weight:600}
+.alt{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px dashed var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:14px}
+details{margin:10px 0 14px}summary{cursor:pointer;color:var(--ac);font-weight:600}
+.pr{display:flex;gap:8px;margin-top:8px}.pr button{white-space:nowrap}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.pb{font:inherit;font-weight:700;border-radius:12px;padding:13px;cursor:pointer;border:1px solid var(--bd);background:var(--bg);color:var(--tx)}
+.pb.ap{background:#000;color:#fff;border-color:#000}
+.pb.pp{background:#ffc439;color:#111;border-color:#ffc439}
+label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:14px 0 0;font-size:.92rem}.chk input{width:auto;margin-top:5px}
+.terms{max-height:210px;overflow:auto;border:1px solid var(--bd);border-radius:12px;padding:4px 14px 10px;margin-top:14px;font-size:.83rem;color:var(--mut)}.terms h4{margin:12px 0 3px;color:var(--tx);font-size:.88rem}.terms p{margin:0}
+.bank{background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin-top:12px}.bank div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+</style>
+</head>
+<body>
+<div class="top">✉️ Brand Reach</div>
+<main>
+  <div class="dots" id="dots"></div>
+  <div id="view"></div>
+</main>
+<footer>Questions? <a href="mailto:Crvfty7@outlook.com">Crvfty7@outlook.com</a></footer>
+<script>
+var S={view:"intro",mode:"signup",email:"",step:0,industry:"",size:0,want:"",name:"",subject:"",body:"",busy:false,promo:"",po:false,pmsg:""};
+var view=document.getElementById("view"),dots=document.getElementById("dots");
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function base(n){return n===1000?30:10}
+function pct(){return S.promo==="51stpscup"?100:S.promo==="newweb"?20:0}
+function tot(n){return base(n)*(100-pct())/100}
+function money(n){return "£"+(n%1?n.toFixed(2):n)}
+function pr(n){return (pct()?"<s>"+money(base(n))+"</s> ":"")+money(tot(n))}
+function go(n){S.step=n;render()}
+function on(id,f){var e=document.getElementById(id);if(e)e.onclick=f}
+function render(){
+  if(S.view!=="tool"){return outer()}
+  view.className="card";dots.innerHTML="";
+  for(var i=0;i<5;i++){var d=document.createElement("i");if(i<=S.step)d.className="on";dots.appendChild(d)}
+  var h="";
+  if(S.step===0){
+    h='<h2>1. Which industry?</h2><label for="ind">Type any industry</label><input id="ind" placeholder="e.g. tech, beauty, fashion" value="'+esc(S.industry)+'">'+
+    '<div class="chips">'+["Tech","Beauty","Fashion","Food &amp; drink","Fitness","Travel"].map(function(c){return '<button class="chip">'+c+'</button>'}).join("")+'</div>'+
+    '<div class="row"><span></span><button class="p" id="n0">Next</button></div>';
+  }else if(S.step===1){
+    h='<h2>2. How many companies?</h2><div class="opts">'+
+    [100,1000].map(function(n){return '<button class="opt'+(S.size===n?' sel':'')+'" data-n="'+n+'"><b>Top '+(n===1000?'1,000':'100')+'</b><span>'+(n===1000?'Widest reach':'Quick &amp; focused')+'</span></button>'}).join("")+'</div>'+
+    '<div class="row"><button class="s" id="b">Back</button><button class="p" id="n1"'+(S.size?'':' disabled')+'>Next</button></div>';
+  }else if(S.step===2){
+    h='<h2>3. What do you want to say?</h2><label for="want">In your own words</label><textarea id="want" placeholder="e.g. I’d love a new iPhone / I’d love some financial support for my project"></textarea>'+
+    '<label for="nm">Your name (goes on the email)</label><input id="nm" value="'+esc(S.name)+'">'+
+    '<div class="note">We write it honestly and politely. We don’t invent claims, and every email carries a one-line opt-out.</div>'+
+    '<div class="row"><button class="s" id="b">Back</button><button class="p" id="n2">Write my email</button></div><div class="err" id="er"></div>';
+  }else if(S.step===3){
+    h='<h2>4. Check your email</h2><p class="note" style="margin-top:0">Use <b>{company}</b> where each brand’s name should appear. Edit anything you like.</p>'+
+    '<label for="sj">Subject</label><input id="sj"><label for="bd">Message</label><textarea id="bd" style="min-height:190px"></textarea>'+
+    '<div class="row"><button class="s" id="b">Back</button><button class="s" id="re">Rewrite</button><button class="p" id="n3">Looks good</button></div><div class="err" id="er"></div>';
+  }else{
+    var o=S.size===1000?100:1000;
+    h='<h2>5. Review &amp; pay</h2><div class="sum"><span>Industry</span><b id="s1"></b></div><div class="sum"><span>Companies</span><b>Top '+(S.size===1000?'1,000':'100')+'</b></div>'+
+    '<div class="tot">'+pr(S.size)+'</div><div class="note" style="margin:0 0 12px">One-off usage fee. You approve the emails before anything is sent.</div>'+
+    '<div class="alt"><span>Top '+(o===1000?'1,000':'100')+' version: <b>'+pr(o)+'</b></span><button class="s" id="alt">Switch</button></div>'+
+    '<details'+(S.po||S.promo?' open':'')+'><summary>Have a promo code?</summary><div class="pr"><input id="pc" placeholder="Enter code" autocomplete="off"><button class="s" id="ap">Apply</button></div>'+
+    (S.pmsg?'<div class="'+(S.promo?'ok':'err')+'">'+esc(S.pmsg)+'</div>':'')+'</details>'+
+    '<button class="p" disabled style="width:100%;margin-bottom:14px">Connect Gmail with Google sign-in</button>'+
+    (tot(S.size)===0?'<button class="p" id="free" style="width:100%">Continue – nothing to pay</button>':
+    '<label class="chk"><input type="checkbox" id="wv"><span>I want the service to start straight away. I understand I can’t cancel or get a refund once my emails have been drafted or sent.</span></label><b style="display:block;margin-top:14px">Pay with</b><div class="pay"><button class="pb ap" data-m="Apple Pay">Apple Pay</button><button class="pb pp" data-m="PayPal">PayPal</button><button class="pb" data-m="Pay by bank">Pay by bank</button><button class="pb" data-m="Card">Debit / credit card</button></div><div class="bank" id="bkd" hidden></div>')+
+    '<div class="note" id="pn">Preview only: payment, Google sign-in and sending aren’t connected yet.</div>'+
+    '<div class="row"><button class="s" id="b">Back</button><span></span></div>';
+  }
+  view.innerHTML=h;
+  on("b",function(){go(S.step-1)});
+  if(S.step===0){
+    var ind=document.getElementById("ind");
+    Array.prototype.forEach.call(view.querySelectorAll(".chip"),function(c){c.onclick=function(){ind.value=c.textContent}});
+    on("n0",function(){if(ind.value.trim()){S.industry=ind.value.trim();go(1)}else ind.focus()});
+  }else if(S.step===1){
+    Array.prototype.forEach.call(view.querySelectorAll(".opt"),function(x){x.onclick=function(){S.size=+x.dataset.n;render()}});
+    on("n1",function(){go(2)});
+  }else if(S.step===2){
+    document.getElementById("want").value=S.want;on("n2",draft);
+  }else if(S.step===3){
+    var sj=document.getElementById("sj"),bd=document.getElementById("bd");sj.value=S.subject;bd.value=S.body;
+    sj.oninput=function(){S.subject=sj.value};bd.oninput=function(){S.body=bd.value};
+    on("re",function(){S.step=2;draft()});on("n3",function(){go(4)});
+  }else{
+    document.getElementById("s1").textContent=S.industry;
+    on("alt",function(){S.size=S.size===1000?100:1000;render()});
+    on("ap",function(){
+      var c=document.getElementById("pc").value.trim().toLowerCase();S.po=true;
+      if(c==="51stpscup"||c==="newweb"){S.promo=c;S.pmsg="Code applied: "+pct()+"% off."}else{S.promo="";S.pmsg=c?"That code isn’t valid.":"Please enter a code."}
+      render();
+    });
+    on("free",function(){document.getElementById("pn").textContent="Preview: this is where Gmail sign-in and sending would start."});
+    Array.prototype.forEach.call(view.querySelectorAll(".pb"),function(x){x.onclick=function(){
+      var pn=document.getElementById("pn"),bk=document.getElementById("bkd");
+      if(!document.getElementById("wv").checked){pn.textContent="Please tick the box above first.";return}
+      if(x.dataset.m==="Pay by bank"){
+        S.ref=S.ref||"BR"+Math.random().toString(36).slice(2,8).toUpperCase();
+        bk.innerHTML='<b>Bank transfer</b><div><span>Account name</span><b>Lewis Doyle</b></div><div><span>Sort code</span><b>04-00-05</b></div><div><span>Account number</span><b>97604475</b></div><div><span>Amount</span><b>'+money(tot(S.size))+'</b></div><div><span>Reference</span><b>'+S.ref+'</b></div><div class="note" style="display:block">Use the reference exactly so your payment can be matched. Transfers are checked by hand.</div>';
+        bk.hidden=false;pn.textContent="Preview only: payment, Google sign-in and sending aren’t connected yet.";
+      }else{pn.textContent="Preview: "+x.dataset.m+" isn’t connected yet. It would be handled by the payment provider, never by this page."}
+    }});
+  }
+}
+function fallback(){
+  S.subject="A quick note for {company}";
+  S.body="Hi {company} team,\n\nI’m a fan of what you do. "+S.want+"\n\nIf that’s something you can help with, I’d be really grateful to hear from you.\n\nThanks for your time,\n"+S.name+"\n\nIf you’d rather not hear from me, just reply “no thanks” and I won’t email again."
+}
+async function draft(){
+  var w=document.getElementById("want"),nm=document.getElementById("nm"),er=document.getElementById("er");
+  S.want=w.value.trim();S.name=nm.value.trim();
+  if(!S.want||!S.name){er.textContent="Please fill in both boxes.";return}
+  var bt=document.getElementById("n2");bt.disabled=true;bt.textContent="Writing…";
+  var prompt="Write a short, professional email from a real person to a company in the "+S.industry+" industry.\nWhat the sender wants: \""+S.want+"\"\nSender name: "+S.name+"\nRules: under 80 words; warm, specific, polite; honest (never invent facts, relationships or urgency); one clear ask; no ALL CAPS, no exclamation spam, no links, no words like free/guarantee/act now; use {company} for the company name; sign off with the sender name; final line is a short opt-out: if they’d rather not hear again, reply “no thanks”.\nReturn only JSON: {\"subject\":\"...\",\"body\":\"...\"}";
+  try{
+    var s=await claude.use("sample");
+    if(!s){fallback()}else{var r=await s(prompt);var j=JSON.parse(r.text.match(/\{[\s\S]*\}/)[0]);S.subject=j.subject;S.body=j.body}
+  }catch(e){fallback()}
+  go(3);
+}
+var TERMS=[
+['1. The service','Brand Reach lets you draft emails with AI and send them to companies you choose. It is run by Lewis Doyle (“we”, “us”). By creating an account you agree to these terms.'],
+['2. No guarantee of results','We do not promise that any company will reply, or give you samples, money, products, jobs or anything else. Most companies will not reply. Emailing more companies does not guarantee any result.'],
+['3. Fees','The fee is a one-off usage fee shown before you pay (Top 100: £10, Top 1,000: £30), less any valid promo code. Promo codes have no cash value and can be withdrawn at any time.'],
+['4. No refunds','The service starts as soon as you pay and ask us to begin, so fees are non-refundable once your emails have been drafted or sent. We do not refund for unanswered emails or poor results. This does not affect any rights you have by law that cannot be waived.'],
+['5. Your responsibility','You are solely responsible for what you ask us to write and send, who you send it to, and for following the law (including UK spam and data-protection rules) and the rules of Google and any other provider. Keep your messages truthful, and do not use the service to harass, mislead or defraud anyone.'],
+['6. AI-written drafts','Drafts are written by AI and may contain mistakes. You must read and approve every email before it is sent. We are not responsible for what is sent from your account.'],
+['7. Third parties','We rely on providers such as Google and payment services. We are not responsible for their outages, decisions or rules, including emails going to spam, being blocked, or accounts being limited or suspended.'],
+['8. Service as is','The service is provided “as is” and “as available”, without warranties of any kind, to the fullest extent the law allows. We may change, pause or stop the service at any time.'],
+['9. Limit of liability','To the fullest extent the law allows, we are not liable for any loss, including lost money, profit, data, opportunities or reputation, or any indirect or consequential loss, however caused. Our total liability to you will not exceed the fee you paid. Nothing in these terms excludes liability for death or personal injury caused by negligence, for fraud, or for anything else the law does not allow us to exclude.'],
+['10. You cover claims','You agree to cover us for any claim, loss or cost arising from your use of the service or the messages you send.'],
+['11. Your account','Keep your login details secure. We may suspend or close accounts used to send spam, harass others or break the law.'],
+['12. Changes and law','We may update these terms by posting them here. They are governed by the law of England and Wales.'],
+['13. Contact','Crvfty7@outlook.com']
+].map(function(t){return '<h4>'+t[0]+'</h4><p>'+t[1]+'</p>'}).join('');
+function outer(){
+  dots.innerHTML="";var h="";
+  view.className=S.view==="intro"?"":"card";
+  if(S.view==="intro"){
+    h='<section class="hero"><span class="badge">✨ AI-written outreach</span><h2>Ask the top brands for <em>what you want.</em></h2><p>Tell us what you’re after. Claude writes a short, polite email and sends it to the top 100 or top 1,000 companies in any industry, from your own Gmail.</p>'+
+    '<div><button class="cta" id="gs">Get started</button><button class="ghost" id="li">I have an account</button></div>'+
+    '<div class="mock"><small>Example email</small><br><b>A quick note for Lumi Beauty</b><br>Hi Lumi team, I’m a fan of your products and would love to try your new range. Thanks for your time, Sam<br><span class="tag">1 of 1,000 · you approve before sending</span></div></section>'+
+    '<div class="sec"><h3>How it works</h3><div class="steps">'+
+    [["Pick your audience","Any industry, top 100 or top 1,000 companies."],["Say what you want","Just type it in your own words."],["Approve the email","Claude writes it. You check and edit it."],["Send in batches","From your own Gmail, in small batches."]].map(function(s,i){return '<div class="step"><i>'+(i+1)+'</i><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join("")+'</div></div>'+
+    '<div class="sec"><h3>What people use it for</h3><div class="ideas"><span>💄 Product samples from beauty brands</span><span>📱 Review units from tech companies</span><span>👗 Collaborations with fashion labels</span><span>🤝 Sponsorship and support</span><span>💼 Job and internship enquiries</span></div></div>'+
+    '<div class="callout"><b>Be realistic.</b> Most companies won’t reply, and we can’t promise that any will say yes. Emailing more companies gives you more chances, not a guarantee.</div>'+
+    '<div class="final"><button class="cta" id="gs2">Start now</button><div class="note">One-off fee. No subscription.</div></div>';
+  }else if(S.view==="auth"){
+    var su=S.mode==="signup";
+    h='<h2>'+(su?'Create your account':'Log in')+'</h2><label for="em">Email</label><input id="em" type="email" autocomplete="email">'+
+    '<label for="pw">Password</label><input id="pw" type="password" autocomplete="'+(su?'new-password':'current-password')+'">'+
+    (su?'<label for="pw2">Confirm password</label><input id="pw2" type="password" autocomplete="new-password">':'')+
+    (su?'<div class="terms">'+TERMS+'</div><label class="chk"><input type="checkbox" id="tc"><span>I have read and agree to the Terms and Conditions above.</span></label>':'')+
+    '<div class="err" id="er"></div><div class="note">Preview only: nothing is saved or sent, so please don’t enter a real password.</div>'+
+    '<div class="row"><button class="s" id="sw">'+(su?'I already have an account':'Create an account')+'</button><button class="p" id="ok">'+(su?'Sign up':'Log in')+'</button></div>';
+  }else{
+    h='<h2>Confirm your email</h2><p>We’ll send a confirmation link to <b id="ve"></b>. Click it to activate your account.</p><div class="note">Preview only: no email is sent.</div><div class="row"><button class="s" id="bk">Back</button><button class="p" id="ok">I’ve confirmed my email</button></div>';
+  }
+  view.innerHTML=h;
+  function to(v,m){S.view=v;if(m)S.mode=m;window.scrollTo(0,0);render()}
+  on("gs",function(){to("auth","signup")});on("gs2",function(){to("auth","signup")});on("li",function(){to("auth","login")});
+  on("sw",function(){to("auth",S.mode==="signup"?"login":"signup")});on("bk",function(){to("auth")});
+  if(S.view==="auth"){on("ok",function(){
+    var em=document.getElementById("em").value.trim(),pw=document.getElementById("pw").value,er=document.getElementById("er");
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){er.textContent="Please enter a valid email address.";return}
+    if(pw.length<8){er.textContent="Password must be at least 8 characters.";return}
+    if(S.mode==="signup"){
+      if(pw!==document.getElementById("pw2").value){er.textContent="The passwords don’t match.";return}
+      if(!document.getElementById("tc").checked){er.textContent="Please accept the Terms and Conditions to continue.";return}
+      S.email=em;to("verify");
+    }else{S.email=em;S.step=0;to("tool")}
+  })}
+  if(S.view==="verify"){document.getElementById("ve").textContent=S.email;on("ok",function(){S.step=0;to("tool")})}
+}
+render();
+</script>
+</body>
+</html>
